@@ -6,7 +6,7 @@ const fs = require("fs");
 
 // Configuración de la conexión a la base de datos
 const dbConfig = {
-  host: 'servidor-app-service.mysql.database.azure.com',
+  host: 'web-server-prueba.mysql.database.azure.com',
   user: 'David',
   password: 'S3naqu3rib',
   database: 'colegio',
@@ -32,7 +32,7 @@ connection.connect((error) => {
 // Definir una ruta para obtener los datos de la tabla
 app.get('/', (req, res) => {
   // Consulta SQL para obtener los datos de la tabla
-  const query = 'SELECT * FROM alumnos';
+  const query = 'SELECT * FROM alumno';
 
   // Ejecutar la consulta
   connection.query(query, (error, results) => {
